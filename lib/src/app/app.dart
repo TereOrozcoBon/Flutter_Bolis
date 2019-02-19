@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:bolis_app/screens/HomeScreen.dart';
-import 'package:bolis_app/screens/userRegisterScreen.dart';
+import 'package:bolis_app/screens/UserRegisterScreen.dart';
+import 'package:bolis_app/screens/UserListScreen.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -20,7 +21,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: UserRegisterPage(title: 'Bolis App app'),
+      home:
+      UserListPage(),
+      //UserRegisterPage(title: 'Bolis App app'),
         //MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

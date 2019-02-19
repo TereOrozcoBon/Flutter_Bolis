@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: AppBar(title: new Text("primera vista"),),
+      body: Center(
+        child: Text("Descripcion de la primer avista"),
+      ),
+    );
+
+  }
+
+
+  /*
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -17,8 +31,10 @@ class MyHomePage extends StatefulWidget {
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
-}
 
+  */
+}
+/*
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
@@ -85,3 +101,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/

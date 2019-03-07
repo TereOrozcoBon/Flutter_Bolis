@@ -53,9 +53,9 @@ class _NavigationDrawer extends State<NavigationDrawer>  with WidgetsBindingObse
             color: Colors.blue,
             child: new ListTile(
               leading: const Icon(Icons.home, color: Colors.white,),
-              title: Text("item 1", style: TextStyle(color: Colors.white),),
+              title: Text("Navigations views", style: TextStyle(color: Colors.white),),
               onTap: () {
-                Navigator.of(context).pop();
+                //Navigator.of(context).pop();
                 Navigator.of(context).push(
                     MaterialPageRoute(
                         builder: (BuildContext context) => MyHomePage())
@@ -64,9 +64,10 @@ class _NavigationDrawer extends State<NavigationDrawer>  with WidgetsBindingObse
             ),
           ),
           new ListTile(
-            title: Text("item 2"),
+            leading: const Icon(Icons.list, color: Colors.white,),
+            title: Text("Lista usuarios registrados"),
             onTap: () {
-              Navigator.of(context).pop();
+              //Navigator.of(context).pop();
               Navigator.of(context).push(
                   MaterialPageRoute(
                       builder: (BuildContext context) => UserListPage())
@@ -74,9 +75,9 @@ class _NavigationDrawer extends State<NavigationDrawer>  with WidgetsBindingObse
             },
           ),
           new ListTile(
-            title: Text("item 3"),
+            title: Text("Registro"),
             onTap: () {
-              Navigator.of(context).pop();
+              //Navigator.of(context).pop();
               Navigator.of(context).push(
                   MaterialPageRoute(
                       builder: (BuildContext context) => UserRegisterPage())
@@ -88,7 +89,7 @@ class _NavigationDrawer extends State<NavigationDrawer>  with WidgetsBindingObse
             leading: const Icon(Icons.info),
             title: Text("item 4"),
             onTap: () {
-              Navigator.of(context).pop();
+              //Navigator.of(context).pop();
               Navigator.of(context).push(
                   MaterialPageRoute(
                       builder: (BuildContext context) => UserRegisterPage())

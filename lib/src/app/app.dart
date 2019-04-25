@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bolis_app/screens/UserRegisterScreen.dart';
 import 'package:bolis_app/screens/UserListScreen.dart';
 import 'package:bolis_app/componentes/NavigationDrawer.dart';
+import 'package:bolis_app/screens/AdminStatistics.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -23,7 +25,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home:
+
         NavigationDrawer(),
+      //AdminStatistics(),
+
       //UserListPage(),
       //UserRegisterPage(title: 'Bolis App app'),
         //MyHomePage(title: 'Flutter Demo Home Page'),

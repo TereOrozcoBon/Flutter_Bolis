@@ -1,34 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:progress_hud/progress_hud.dart';
-import 'package:bolis_app/screens/PedidoDetalleScreen.dart';
-import 'package:bolis_app/Controllers/PedidosApi.dart';
+import 'package:bolis_app/Controllers/ProductosApi.dart';
 
 
-import 'package:bolis_app/models/pedidos.dart';
-import 'dart:async';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
+class ProductosListPage extends StatefulWidget {
 
+  ProductosListPage({Key key, this.title}) : super(key: key);
 
-
-class PedidosListPage extends StatefulWidget {
   final String title;
-  final String id;
-  PedidosListPage({Key key, this.title, this.id}) : super(key: key);
+
+  /*@override
+  _PedidoPageState createState() => _PedidoPageState();*/
 
   @override
   State<StatefulWidget> createState() {
-    return new _PedidosListPage();
+
+    //return new UserListPageState(lstUsers: lstUsers);
+    return new _ProductosListPage();
   }
+
 }
 
-class _PedidosListPage extends State<PedidosListPage> {
+class _ProductosListPage extends State<ProductosListPage> {
+
+
+
   //Libreria de progreso
   ProgressHUD _progressHUD;
   bool _loading = true;
 
   int _counter = 0;
-
 
   @override
   void initState() {
@@ -49,29 +50,12 @@ class _PedidosListPage extends State<PedidosListPage> {
   }
 
 
-
-/*
-  Future<List<Pedido>> getPedidos(idCliente) async {
-
-    var aaa = idCliente;
-
-
-    const URL = "http://5c6b35cfe85ff40014085511.mockapi.io/api/v1/users/1/pedidos";
-    var data = await http.get(URL);
-
-    var jsonData = json.decode(data.body);
-    List<Pedido> pedidos = [];
-
-    for(var a in jsonData){
-      Pedido pedido;
-      pedido = Pedido(a["id"], a["userId"] , a["sabor"], a["cantidad"]);
-      pedidos.add(pedido);
-    }
-
-    print(pedidos.length);
-    return pedidos;
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
   }
-*/
+
 
 
   @override
@@ -84,12 +68,9 @@ class _PedidosListPage extends State<PedidosListPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: FutureBuilder(
-          future: getDatosAlumno(widget.id),
+          future: get(),
           builder: (BuildContext context, AsyncSnapshot snapshot){
-
 
             if(snapshot.data ==  null){
               return Container(
@@ -107,7 +88,7 @@ class _PedidosListPage extends State<PedidosListPage> {
 
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(
-                        "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png" //snapshot.data[index].imagen //"https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png"
+                        "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png"
                     ),
                   ),
 
@@ -126,7 +107,11 @@ class _PedidosListPage extends State<PedidosListPage> {
           },
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
-

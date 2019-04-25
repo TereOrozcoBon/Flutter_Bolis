@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-//import 'floating_action_button_lugar.dart';
+import 'FloatingActionButton.dart';
 
 class CardImage extends StatelessWidget{
 
-  String pathImage  = "assets/img/lugares/lugar1.jpg";
+  String pathImage  = "a";
 
   CardImage(this.pathImage);
 
@@ -40,7 +40,7 @@ class CardImage extends StatelessWidget{
       alignment: Alignment(0.9, 1.1),
       children: <Widget>[
         card,
-        //FloatingActionButtonLugar()
+        //FloatingActionButton()
       ],
     );
   }

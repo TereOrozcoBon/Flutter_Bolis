@@ -19,6 +19,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  http: any
+  progress_hud: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -67,3 +69,17 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+  fonts:
+    - family: Brushcrazy DEMO
+      fonts:
+      - asset: fonts/Brushcrazy.otf
+
+  assets:
+    - assets/img/bolis/bolis1.jpg
+    - assets/img/bolis/bolis2.jpg
+    - assets/img/bolis/bolis3.jpg
+    - assets/img/bolis/bolis4.jpg
+    - assets/img/bolis/bolis5.jpg
+    - assets/img/bolis/bolis6.jpg
+

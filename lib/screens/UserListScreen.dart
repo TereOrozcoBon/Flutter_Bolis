@@ -36,6 +36,7 @@ class UserListPageState extends State<UserListPage> {
   //final List<String> lstUsers;
   //genera lista de usuarios (genérico)
   final lstUsers = List<User>.generate(20, (i) => User(
+  'id $i',
   'nombre $i',
   'apellido $i',
   'correo $i',
